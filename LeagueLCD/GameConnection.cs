@@ -20,19 +20,20 @@ namespace LeagueLCD
         /// <summary>
         /// Whether or not statistics are being tracked and updated.
         /// </summary>
-        public bool Polling = true;
+        public bool Polling;
         /// <summary>
         /// How many times to poll game data every second.
         /// </summary>
         public int TickRate;
-        public GameConnection(int tickRate = 4)
+        public GameConnection(int tickRate = 4, bool beginAutomatically = true)
         {
             TickRate = tickRate;
+            Polling = beginAutomatically;
             client = new HttpClient(handler);
             backgroundThread = new Thread(Poll);
             backgroundThread.Start();
         }
-        private async void Poll()
+        public async void Poll()
         {
             while (true)
             {
