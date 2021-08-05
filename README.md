@@ -1,6 +1,6 @@
 # League LiveClientData API
 An unofficial C# library for tracking statistics on locally-running League of Legends games.
-Can provide all the data the official Riot LiveClientData API provides.]
+Can provide all the data the official Riot LiveClientData API provides.
 
 Included in this repository is also a small example program, LCUTesting.
 
