@@ -51,11 +51,13 @@ namespace LeagueLCD
                     }
                     catch(Exception e)
                     {
+                        Console.WriteLine("An error occured while attempting to poll the game. Polling stopped.");
                         Console.WriteLine(e);
                         Connected = false;
+                        Polling = false;
                     }
-                    Thread.Sleep(1000 / TickRate);
                 }
+                Thread.Sleep(1000 / TickRate);
             }
         }
     }
