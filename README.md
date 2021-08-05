@@ -11,6 +11,7 @@ The **GameConnection** will automatically attempt to connect and poll a locally 
 
 Access the data through the **Game** property.
 
-To stop polling, set the **Polling** property to false.
+To stop polling, set the **Polling** property to false. To instead poll manually instead of automatically, set **beginAutomatically** in the constructor to false and call **Poll()** to populate the fields.
 
 For more accurate data, set the **TickRate** to a higher value. The connection will poll this many times per second.
+
